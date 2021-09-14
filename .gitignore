@@ -1,0 +1,9 @@
+*.idea
+.vscode/
+
+# vim stuff
+*~
+.*.sw?
+
+# macOS
+.DS_Store
