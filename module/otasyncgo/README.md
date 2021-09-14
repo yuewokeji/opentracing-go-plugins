@@ -1,12 +1,8 @@
 # otasyncgo
 
----
-
 OpenTracing plugin for spawns new goroutine.
 
 ## Usage
-
----
 
 ```go
 package main

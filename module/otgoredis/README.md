@@ -1,12 +1,8 @@
 # otgoredis
 
----
-
 OpenTracing plugin for [goredis](https://github.com/go-redis/redis).
 
 ## Usage
-
----
 
 ```go
 package main

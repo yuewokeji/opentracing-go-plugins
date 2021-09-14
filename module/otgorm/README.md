@@ -1,12 +1,8 @@
 # otgorm
 
----
-
 OpenTracing plugin for [gorm](https://github.com/go-gorm/gorm).
 
 ## Usage
-
----
 
 ```go
 package main
