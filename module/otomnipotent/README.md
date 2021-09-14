@@ -1,12 +1,8 @@
 # otomnipotent
 
----
-
 The omnipotent plugin of OpenTracing.
 
 ## Usage
-
----
 
 ```go
 package main

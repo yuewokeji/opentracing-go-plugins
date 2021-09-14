@@ -1,12 +1,8 @@
 # othttp
 
----
-
 OpenTracing plugin for the Go standard library **net/http**.
 
 ## Usage
-
----
 
 ### Client
 

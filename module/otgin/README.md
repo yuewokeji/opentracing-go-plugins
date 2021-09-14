@@ -2,11 +2,7 @@
 
 OpenTracing plugin for [gin](https://github.com/gin-gonic/gin) web framework.
 
----
-
 ## Usage
-
----
 
 ```go
 package main

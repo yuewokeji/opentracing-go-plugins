@@ -1,20 +1,14 @@
 # OpenTracing-Go-Plugins
 
----
-
 The plugins of [opentracing-go](https://github.com/opentracing/opentracing-go).
 
 ## Installation
-
----
 
 ```bash
 go get -u github.com/yuewokeji/opentracing-go-plugins
 ```
 
 ## Configuration
-
----
 
 ### Initialize a tracer
 
@@ -57,11 +51,9 @@ func initGlobalTracer() io.Closer {
 
 ## Plugin Summary
 
----
-
 1. [goroutine](module/otasyncgo/README.md)
 1. [gin](module/otgin/README.md)
-1. [goredis](module/otgoredisv8/README.md)
+1. [goredis](module/otgoredis/README.md)
 1. [gorm](module/otgorm/README.md)
 1. [grpc](module/otgrpc/README.md)
 1. [http client](module/othttp/README.md)

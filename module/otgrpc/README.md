@@ -1,12 +1,8 @@
 # otgrpc
 
-----
-
 OpenTracing plugin for [grpc](https://github.com/grpc/grpc).
 
 ## Usage
-
----
 
 ### Server
 
