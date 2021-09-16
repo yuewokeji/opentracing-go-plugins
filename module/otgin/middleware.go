@@ -1,7 +1,6 @@
 package otgin
 
 import (
-	"context"
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -89,9 +88,6 @@ func (m *middleware) handle(ctx *gin.Context) {
 	}()
 
 	ctx.Request = othttp.RequestWithContext(ctx.Request, span)
-	if m.saveTracingContext {
-		SaveTracingContext(ctx, opentracing.ContextWithSpan(context.Background(), span))
-	}
 	ctx.Next()
 }
 
@@ -122,7 +118,7 @@ func WithServerNamePrefix(s string) Option {
 	}
 }
 
-func WithClientIP(fun othttp.ClientIPFunc) Option {
+func WithClientIPFunc(fun othttp.ClientIPFunc) Option {
 	return func(m *middleware) {
 		m.clientIPFunc = fun
 	}
@@ -131,11 +127,5 @@ func WithClientIP(fun othttp.ClientIPFunc) Option {
 func WithRecover(r gin.HandlerFunc) Option {
 	return func(m *middleware) {
 		m.recoverFunc = r
-	}
-}
-
-func WithSaveTracingContext() Option {
-	return func(m *middleware) {
-		m.saveTracingContext = true
 	}
 }

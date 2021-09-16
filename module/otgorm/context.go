@@ -6,6 +6,7 @@ import (
 	"errors"
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
+	otplugins "github.com/yuewokeji/opentracing-go-plugins"
 	"gorm.io/gorm"
 )
 
@@ -85,7 +86,7 @@ func getSpan(db *gorm.DB) (opentracing.Span, context.Context) {
 	return nil, nil
 }
 
-const contextSceneKey = "otgorm:context:scene"
+const contextSceneKey = "otgorm:context:scene:" + otplugins.Version
 
 func keepScene(db *gorm.DB, ctx context.Context) {
 	db.Set(contextSceneKey, ctx)
